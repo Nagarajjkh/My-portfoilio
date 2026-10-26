@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: #08080a;
+  color: #f3f1ea;
+  font-family: 'Onest', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(255, 59, 29, 0.3);
+  color: #f3f1ea;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #08080a;
+}
+::-webkit-scrollbar-thumb {
+  background: #17171b;
+  border-radius: 0;
+  border: 2px solid #08080a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a30;
+}
+
+/* Focus visibility */
+:focus-visible {
+  outline: 2px solid #ff3b1d;
+  outline-offset: 3px;
+}
+
+/* Spring-text-engine wrapper is display:flex; never use text-align for centering. */
+[data-tengine] {
+  line-height: 1.1;
+}

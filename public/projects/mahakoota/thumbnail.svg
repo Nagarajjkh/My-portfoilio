@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#17171b"/>
+      <stop offset="60%" stop-color="#0d0d0f"/>
+      <stop offset="100%" stop-color="#08080a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="45%">
+      <stop offset="0%" stop-color="#ff3b1d" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ff3b1d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2622"/>
+      <stop offset="100%" stop-color="#15110f"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+
+  <!-- distant hills -->
+  <path d="M0 720 Q 300 660 600 700 T 1200 690 T 1600 710 L1600 1000 L0 1000 Z" fill="#0f0e10" opacity="0.9"/>
+
+  <!-- temple complex: stacked shikharas -->
+  <g fill="url(#stone)" stroke="#3a342e" stroke-width="2">
+    <!-- central tallest tower -->
+    <path d="M760 620 L760 360 L800 300 L840 360 L840 620 Z"/>
+    <path d="M800 300 L800 240 L820 220 L820 300 Z"/>
+    <!-- left tower -->
+    <path d="M620 620 L620 420 L660 372 L700 420 L700 620 Z"/>
+    <path d="M660 372 L660 320 L680 304 L680 372 Z"/>
+    <!-- right tower -->
+    <path d="M900 620 L900 420 L940 372 L980 420 L980 620 Z"/>
+    <path d="M940 372 L940 320 L960 304 L960 372 Z"/>
+    <!-- base plinth -->
+    <rect x="560" y="620" width="480" height="60"/>
+    <rect x="520" y="680" width="560" height="50"/>
+  </g>
+
+  <!-- subtle carving lines on central tower -->
+  <g stroke="#47403a" stroke-width="1.5" opacity="0.7" fill="none">
+    <path d="M770 360 L770 620 M830 360 L830 620"/>
+    <path d="M760 430 L840 430 M760 500 L840 500 M760 570 L840 570"/>
+  </g>
+
+  <!-- gateway on far left -->
+  <g fill="url(#stone)" stroke="#3a342e" stroke-width="2">
+    <rect x="380" y="520" width="120" height="160"/>
+    <path d="M380 520 L440 470 L500 520 Z"/>
+  </g>
+
+  <!-- ground -->
+  <rect x="0" y="730" width="1600" height="270" fill="#0a0a0c"/>
+
+  <!-- foreground text -->
+  <text x="80" y="900" font-family="Anton, Arial, sans-serif" font-size="64" fill="#f3f1ea" opacity="0.92" letter-spacing="-2">MAHAKOOTA</text>
+  <text x="82" y="948" font-family="Onest, Arial, sans-serif" font-size="22" fill="#807f78" letter-spacing="6">HERITAGE · KARNATAKA</text>
+
+  <!-- accent dot -->
+  <circle cx="1500" cy="900" r="8" fill="#ff3b1d"/>
+</svg>

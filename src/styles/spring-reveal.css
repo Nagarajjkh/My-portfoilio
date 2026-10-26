@@ -1,0 +1,41 @@
+/* Spring-text reveal: letters rise up and settle into place, staggered.
+   Pure CSS transitions (no keyframes) — interruptible and reduced-motion safe.
+   The mask is an inline-block span with overflow hidden; the letter slides
+   up from below the word's edge. Centering uses flex (justify-content) on
+   the container, never text-align. */
+
+.str-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.3em;
+  line-height: 1.1;
+}
+
+.str-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.str-letter {
+  display: inline-block;
+  transform: translateY(24px);
+  opacity: 0;
+  transition:
+    transform 0.62s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.62s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.str-word.is-in .str-letter {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .str-letter {
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+  }
+}
